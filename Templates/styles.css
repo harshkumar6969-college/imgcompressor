@@ -1,0 +1,20 @@
+body{
+    display:grid;
+    place-items:center
+}
+form{
+    display: grid;
+    place-items: center;
+    border: 20px solid black;
+}
+input{
+    display: grid;
+    place-items: center;
+}
+.filled{
+    margin: 20px;   
+    border: 0px solid black;
+}
+a{
+    display: grid;
+}
