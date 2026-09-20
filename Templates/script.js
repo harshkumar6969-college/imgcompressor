@@ -15,5 +15,6 @@ sub.addEventListener('submit', async function(event){
     a.href = "static/compressed.jpg?t=" + Date.now();}
     else {
         console.log("failed")
+        alert("Please add a File")
     }
 })
