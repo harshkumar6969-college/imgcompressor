@@ -12,7 +12,7 @@ sub.addEventListener('submit', async function(event){
     if (response.ok){
      console.log("MIssion sucessful")
     a.style.display = "grid";
-    a.href = "static/compressed.jpg"}
+    a.href = "static/compressed.jpg?t=" + Date.now();}
     else {
         console.log("failed")
     }
