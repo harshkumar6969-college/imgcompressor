@@ -20,13 +20,16 @@ input{
      font-family: "Inter";
 }
 .filled{
-    margin: 20px;   
+    margin: 20px;  
+    padding: 10px; 
     border: 0px solid black;
-            font-family: "Archivo Black", sans-serif;
+    font-family: "Archivo Black", sans-serif;
     font-weight: 10;
     font-style: normal;
     text-decoration: none;
-
+}
+.filled:hover{
+    cursor: pointer;
 }
 .down{
     display: none;
