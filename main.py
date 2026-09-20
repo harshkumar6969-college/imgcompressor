@@ -30,5 +30,13 @@ async def handle_upload(file: UploadFile = File(...)):
         with Image.open(finalpath) as img:
             compath = os.path.join("Templates", "compressed.jpg")
             img.save(compath, optimize=True, quality=70)
-            print(f"Files saved sucessfully to {compath}")
+            print(f"Image sucessfully saved to {compath}")
     compressor()
+
+class NoCacheStaticFiles(stat):
+    def file_response(self, *args, **kwargs):
+        response = super().file_response(*args, **kwargs)
+        response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+        response.headers["Pragma"] = "no-cache"
+        response.headers["Expires"] = "0"
+        return response
